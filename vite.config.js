@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// 使用相對路徑，適用於 GitHub Pages 專案子路徑或自訂網域。
+// Repository: lvb0799/resume → https://lvb0799.github.io/resume/
 export default defineConfig({
   plugins: [react()],
   base: '/resume/',
