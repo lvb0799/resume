@@ -1,0 +1,9 @@
+.skill-section{background:#0b1020}
+.skill-card{background:#121b2d;border:1px solid #263247;border-radius:7px;padding:25px 22px;min-height:296px;transition:border-color .2s,transform .2s}
+.skill-card:hover,.project-card:hover{border-color:#b8f36b88;transform:translateY(-4px)}
+.skill-icon{width:42px;height:42px;background:#b8f36b13;color:#b8f36b;display:grid;place-items:center;border:1px solid #b8f36b35;border-radius:7px}
+.skill-index{font-size:10px;color:#62748e}
+.skill-card h3{font-size:20px;margin:25px 0 5px}
+.skill-card p{font-size:12px;color:#94a5b9;margin:0 0 24px}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chip{font-size:11px;border:1px solid #334159;background:#1a2639;color:#aebed2;padding:6px 9px;border-radius:4px}

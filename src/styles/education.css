@@ -1,0 +1,11 @@
+.education-section{background:#10182a}
+.background-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.background-panel{border:1px solid #2a3a4f;background:#152034;border-radius:6px;padding:28px;min-height:260px}
+.panel-label{justify-content:flex-start;gap:12px;color:#b8f36b;font-size:11px;letter-spacing:1.5px;margin-bottom:32px}
+.edu-item{gap:10px;border-bottom:1px solid #ffffff13;padding:0 0 19px;margin-bottom:19px}
+.edu-item:last-child{border:0;margin:0;padding:0}
+.edu-item h3,.certification h3{margin:0 0 8px;font-size:17px}
+.edu-item p,.certification p{margin:0;color:#90a2b9;font-size:12px}
+.edu-item>span{font-size:11px;color:#8294aa;white-space:nowrap}
+.certification{display:flex;align-items:center;gap:19px}
+.cert-icon{width:62px;height:62px;flex:none;background:#b8f36b13;color:#b8f36b;border:1px solid #b8f36b44;display:grid;place-items:center;border-radius:7px}

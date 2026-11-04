@@ -1,0 +1,16 @@
+.experience-section{background:#0b1020}
+.experience-list{margin-top:55px}
+.experience-item{display:grid;grid-template-columns:60px 1fr;gap:20px}
+.exp-left{display:flex;align-items:center;flex-direction:column}
+.exp-step{display:grid;place-items:center;min-width:39px;height:39px;border:1px solid #b8f36b66;color:#b8f36b;border-radius:50%;font:12px 'DM Mono',monospace;background:#172330}
+.exp-line{width:1px;background:#304057;flex:1;margin:8px 0}
+.experience-item:last-child .exp-line{background:transparent}
+.exp-main{padding:0 0 46px}
+.exp-heading{align-items:start;gap:18px}
+.exp-heading h3{font-size:22px;margin:5px 0 8px}
+.exp-role{font-size:13px;color:#b8f36b;margin:0}
+.exp-date{color:#8393ab;font-size:11px;white-space:nowrap;margin-top:10px}
+.exp-description{font-size:13px;color:#acb9ca;line-height:2;margin:20px 0 12px;max-width:760px}
+.exp-bullets{padding:0 0 0 18px;margin:8px 0 18px;color:#94a9bc;font-size:12px;line-height:2.1}
+.exp-bullets li::marker{color:#b8f36b}
+.exp-stack{margin-top:14px}

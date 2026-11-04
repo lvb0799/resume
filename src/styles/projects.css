@@ -1,0 +1,13 @@
+.project-section{background:#10182a}
+.project-card{border:1px solid #29394c;background:#121e30;border-radius:7px;overflow:hidden;transition:transform .2s,border-color .2s}
+.project-card-top{padding:20px 24px 0;font-size:10px;letter-spacing:1.5px;color:#b8f36b}
+.project-num{font-size:13px;color:#61768a}
+.project-visual{margin:15px 24px 0;height:145px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:11px;background:radial-gradient(ellipse at 50% 100%,#b8f36b19,transparent 65%),repeating-linear-gradient(90deg,transparent,transparent 48px,#ffffff05 49px);border:1px solid #ffffff0b;position:relative;overflow:hidden;color:#b8f36b}
+.project-visual>span{font-size:10px;letter-spacing:2px;color:#879baa}
+.visual-rings{position:absolute;width:220px;height:220px;border:1px solid #b8f36b14;border-radius:50%;box-shadow:0 0 0 42px #b8f36b08,0 0 0 84px #b8f36b04}
+.project-card-body{padding:25px}
+.project-card h3{font-size:22px;margin:0 0 12px}
+.project-card p{font-size:13px;color:#a5b4c8;line-height:2;min-height:76px;margin:0 0 20px}
+.project-tags,.exp-stack{display:flex;gap:7px;flex-wrap:wrap}
+.project-tags span,.exp-stack span{font-size:10px;color:#8eabb4;border:1px solid #344a57;border-radius:3px;padding:6px 9px}
+.project-disclaimer{font-size:11px;line-height:1.8;color:#718397;margin-top:24px}

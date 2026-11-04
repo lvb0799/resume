@@ -1,0 +1,11 @@
+.contact-section{padding:100px 0;background:#b8f36b;color:#102019;overflow:hidden}
+.contact-inner{display:flex;align-items:center;justify-content:space-between;position:relative}
+.contact-section .eyebrow,.contact-section .eyebrow span{color:#334d24}
+.contact-section .eyebrow i{background:#44632a}
+.contact-section h2{font-size:clamp(34px,5vw,65px);line-height:1.35;letter-spacing:-2px;margin:23px 0}
+.contact-section h2 span{color:#365d20}
+.contact-section p{font-size:14px;color:#3d542b;line-height:2}
+.contact-actions{justify-content:flex-start;gap:14px;margin-top:26px}
+.contact-section .btn-primary{background:#0d1924;color:#e8f8d1}
+.contact-section .btn-outline{color:#0d1924;border-color:#486733}
+.contact-symbol{font-size:230px;line-height:1;font-weight:800;letter-spacing:-45px;margin-right:60px;color:#315a2225;transform:rotate(-8deg);white-space:nowrap}

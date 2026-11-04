@@ -1,0 +1,51 @@
+/* V3 animations: transform/opacity only where possible; honors reduced-motion preferences. */
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:100;transform-origin:left center;background:linear-gradient(90deg,#b8f36b,#4fe6bf);box-shadow:0 0 15px #b8f36b6e;pointer-events:none;will-change:transform}
+@keyframes rise-in{from{opacity:0;transform:translateY(30px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes hero-rotate{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes hero-rotate-reverse{to{transform:translate(-50%,-50%) rotate(-360deg)}}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@keyframes grid-drift{to{background-position:40px 40px}}
+@keyframes breath{0%,100%{box-shadow:0 0 0 0 #b8f36b66}50%{box-shadow:0 0 0 8px #b8f36b00}}
+@keyframes line-enter{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero-content > *{animation:rise-in .8s both cubic-bezier(.2,.8,.2,1)}
+.hero-content > :nth-child(1){animation-delay:.08s}.hero-content > :nth-child(2){animation-delay:.16s}.hero-content > :nth-child(3){animation-delay:.22s}.hero-content > :nth-child(4){animation-delay:.30s}.hero-content > :nth-child(5){animation-delay:.36s}.hero-content > :nth-child(6){animation-delay:.44s}.hero-content > :nth-child(7){animation-delay:.52s}.hero-content > :nth-child(8){animation-delay:.60s}
+.hero-rule{transform-origin:left;animation:line-enter 1s .38s backwards}
+.hero-art{animation:rise-in 1.3s .35s backwards}
+.art-orbit-1{animation:hero-rotate 38s linear infinite}
+.art-orbit-2{animation:hero-rotate-reverse 26s linear infinite}
+.art-core{transition:box-shadow .35s,border-color .35s}
+.hero-art:hover .art-core{box-shadow:0 0 110px #a6f26335,inset 0 1px 12px #ffffff28;border-color:#b8f36ba0}
+.art-floating{animation:bob 5s ease-in-out infinite}.art-b{animation-delay:-1.7s}.art-c{animation-delay:-3.2s}
+.hero-grain{animation:grid-drift 22s linear infinite}
+.pulse,.current-dot{animation:breath 2.1s ease-in-out infinite}
+.motion-ready .motion-target{opacity:0;transform:translateY(32px);transition:opacity .72s ease,transform .72s cubic-bezier(.2,.8,.2,1);transition-delay:var(--motion-delay,0ms)}
+.motion-ready .motion-target.is-visible{opacity:1;transform:translateY(0)}
+.skill-card,.project-card{position:relative;isolation:isolate;transition:border-color .3s,box-shadow .3s,transform .3s cubic-bezier(.2,.8,.2,1)}
+.skill-card::before,.project-card::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(250px circle at var(--pointer-x,50%) var(--pointer-y,50%),#b8f36b15,transparent 75%)}
+.skill-card:hover,.project-card:hover{transform:translateY(-8px);border-color:#b8f36b70;box-shadow:0 22px 44px #0005}
+.skill-card:hover::before,.project-card:hover::before{opacity:1}
+.project-visual>svg{transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .35s}
+.project-card:hover .project-visual>svg{transform:translateY(-6px) scale(1.12);filter:drop-shadow(0 0 12px #b8f36b66)}
+.visual-rings{transition:transform .6s ease,opacity .6s}
+.project-card:hover .visual-rings{transform:scale(1.2);opacity:.8}
+.chip,.project-tags span,.exp-stack span{transition:border-color .25s,color .25s,background .25s}
+.chip:hover,.project-tags span:hover,.exp-stack span:hover{border-color:#b8f36b80;color:#caff9f;background:#b8f36b12}
+.exp-step{transition:transform .35s,box-shadow .35s}
+.experience-item:hover .exp-step{transform:scale(1.14);box-shadow:0 0 22px #b8f36b36}
+.exp-line{transform-origin:top;transition:background .3s}
+.experience-item:hover .exp-line{background:#b8f36b70}
+.btn{transition:transform .22s,box-shadow .22s,border-color .22s,background .22s}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary:hover{box-shadow:0 12px 28px #b8f36b30}
+.nav>a{transition:color .2s,transform .2s}.nav>a:hover{transform:translateY(-2px)}
+@media(max-width:760px){.hero-art{animation:none}.skill-card:hover,.project-card:hover{transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){
+  .hero-content > *,.hero-rule,.hero-art,.art-orbit-1,.art-orbit-2,.art-floating,.hero-grain,.pulse,.current-dot{animation:none!important}
+  .motion-ready .motion-target{opacity:1!important;transform:none!important;transition:none!important}
+  .skill-card:hover,.project-card:hover,.btn:hover,.nav>a:hover,.experience-item:hover .exp-step{transform:none!important}
+  .scroll-progress{transition:none}
+}
+/* Keep hover lift active after the scroll reveal has completed. */
+.motion-ready .skill-card.motion-target.is-visible:hover,
+.motion-ready .project-card.motion-target.is-visible:hover{transform:translateY(-8px)}
+@media(prefers-reduced-motion:reduce){.motion-ready .skill-card.motion-target.is-visible:hover,.motion-ready .project-card.motion-target.is-visible:hover{transform:none}}
