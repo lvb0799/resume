@@ -1,5 +1,5 @@
-import { Layers3, BrainCircuit, CreditCard, Activity } from 'lucide-react'
-const icons = { web: Layers3, ai: BrainCircuit, finance: CreditCard, energy: Activity }
+import { Layers3, BrainCircuit, CreditCard, Activity, MapPinned } from 'lucide-react'
+const icons = { web: Layers3, ai: BrainCircuit, finance: CreditCard, energy: Activity, travel: MapPinned }
 export default function ProjectVisual({ item }) {
   const Icon = icons[item.visual] || Layers3
   return (

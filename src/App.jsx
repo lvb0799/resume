@@ -6,7 +6,6 @@ import Footer from './components/Footer'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Skills from './sections/Skills'
-import Projects from './sections/Projects'
 import Portfolio from './sections/Portfolio'
 import Experience from './sections/Experience'
 import Education from './sections/Education'
@@ -36,7 +35,6 @@ export default function App() {
         <Hero />
         <About />
         <Skills />
-        <Projects />
         <Portfolio />
         <Experience />
         <Education />

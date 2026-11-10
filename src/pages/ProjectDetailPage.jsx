@@ -8,8 +8,6 @@ export default function ProjectDetailPage({ projectId }) {
   const item = portfolioItems.find(project => project.id === projectId)
   useEffect(() => { window.scrollTo({top:0,behavior:'instant'}); document.title = item ? `${item.title} | LVB Portfolio` : '找不到專案 | LVB Portfolio'; return () => { document.title = 'LVB Portfolio' } }, [item])
   if (!item) return <main className="case-page"><div className="container case-not-found"><h1>找不到此專案</h1><p>這個專案不存在或已經移動。</p><a className="case-back" href="#portfolio"><ArrowLeft size={16}/> 回到作品集</a></div></main>
-  const currentIndex = portfolioItems.findIndex(project => project.id === item.id)
-  const next = portfolioItems[(currentIndex+1)%portfolioItems.length]
   return <main className="case-page" id="project-detail"><div className="container">
     <div className="case-breadcrumb"><a href="#portfolio"><ArrowLeft size={16}/> 返回作品集</a><span>/</span><span>CASE STUDY {item.number}</span></div>
     <header className="case-hero"><div><span className="case-eyebrow"><Terminal size={15}/> PROJECT / {item.short}</span><h1>{item.title}</h1><p>{item.summary}</p><div className="case-tags">{item.stack.map(t=><span key={t}>{t}</span>)}</div></div><div className="case-hero-meta"><span>CASE #{item.number}</span><strong>{item.subtitle}</strong><small>{item.type}</small></div></header>
@@ -19,7 +17,7 @@ export default function ProjectDetailPage({ projectId }) {
     <section className="case-section"><div className="case-section-title"><span>02 / IMPLEMENTATION</span><h2>主要工作內容</h2></div><div className="case-task-list">{item.work.map((task,i)=><div className="case-task" key={task}><span>{String(i+1).padStart(2,'0')}</span><p>{task}</p></div>)}</div></section>
     <section className="case-section"><div className="case-section-title"><span>03 / TECHNOLOGY</span><h2>使用技術</h2></div><div className="case-tech-grid">{item.stack.map(t=><span key={t}>{t}</span>)}</div></section>
     {item.links?.length>0 && <section className="case-section"><div className="case-section-title"><span>04 / RESOURCES</span><h2>公開連結</h2></div><div className="case-link-list">{item.links.map(link=><a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}<ArrowUpRight size={16}/></a>)}</div></section>}
-    <div className="case-privacy"><ShieldCheck size={17}/><span>{item.disclaimer} 本頁僅呈現可公開分享的專案描述及抽象示意，不包含內部原始碼、機密數據或實際部署資訊。</span></div>
-    <div className="case-navigation"><a href="#portfolio"><ArrowLeft size={17}/> 所有作品</a><a href={`#/projects/${next.id}`}><span>下一個專案<small>{next.title}</small></span><ArrowUpRight size={20}/></a></div>
+    <div className="case-privacy"><ShieldCheck size={17}/><span>{item.disclaimer} 本頁僅呈現可公開分享的內容；架構圖為技術概念示意。</span></div>
+    <div className="case-navigation"><a href="#portfolio"><ArrowLeft size={17}/> 所有作品</a></div>
   </div></main>
 }

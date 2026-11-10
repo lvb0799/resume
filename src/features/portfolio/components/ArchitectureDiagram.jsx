@@ -17,6 +17,11 @@ const topology = {
     { id:'api', label:'Batch Process', hint:'C# / VB', detail:'批次處理及作業流程開發維護。', Icon:Workflow },
     { id:'data', label:'Data Layer', hint:'MSSQL / SP', detail:'資料庫 Stored Procedure 與既有資料流程。', Icon:Database },
   ],
+  'busan-travel': [
+    { id:'ui', label:'React SPA', hint:'React 19 / Vite 7', detail:'五日行程、時間軸、今日旅遊模式及手機版互動介面，無自建後端。', Icon:Monitor },
+    { id:'map', label:'Map & Navigation', hint:'Leaflet / OSM', detail:'以 React Leaflet 顯示景點圖釘及示意路線，並提供 Naver Map 搜尋入口；不是即時導航。', Icon:Workflow },
+    { id:'storage', label:'Local Data / PWA', hint:'localStorage / SW', detail:'行程資料由前端讀取；瀏覽器 localStorage 保存旅行打卡與家庭設定，Service Worker 提供有限的離線快取。', Icon:Database },
+  ],
   'energy-monitoring': [
     { id:'ui', label:'Monitoring UI', hint:'ASP.NET / JS', detail:'設備監控、用電資訊與統計畫面。', Icon:Monitor },
     { id:'api', label:'Integration', hint:'C# / WCF', detail:'串接能源管理流程與設備資料。', Icon:Server },
@@ -39,6 +44,6 @@ export default function ArchitectureDiagram({ item }) {
       </div>)}
     </div>
     <div className="architecture-inspector" aria-live="polite"><Info size={17}/><div><strong>{current.label}</strong><p>{current.detail}</p></div></div>
-    <p className="architecture-note">此為依可公開的專案描述繪製之概念架構，非實際企業系統拓樸或網路連線。</p>
+    <p className="architecture-note">{item.architectureNote || '此為依可公開的專案描述繪製之概念架構，非實際企業系統拓樸或網路連線。'}</p>
   </div>
 }

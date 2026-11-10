@@ -67,3 +67,9 @@
 @media(max-width:760px){.console-content{padding:18px}.console-toolbar{padding:15px}.console-project-grid{grid-template-columns:1fr}.console-project-visual .portfolio-art{height:200px}.console-heading h3{font-size:22px}.console-status{font-size:0}.console-status .console-indicator{font-size:10px}.console-filters{min-width:100%}.console-search{width:100%}.console-footer{font-size:9px}}
 @media(max-width:430px){.console-stat{padding:12px}.console-stat-head{font-size:9px}.console-identity strong{font-size:12px}.console-identity small{font-size:9px}.console-identity{gap:9px}.console-terminal{width:36px;height:36px}.console-project-title h3{font-size:17px}}
 @media(prefers-reduced-motion:reduce){.console-project{animation:none!important}.console-project,.console-stat,.console-project-title svg{transition:none!important}}
+
+/* BusanTravel: independent travel-project accent while keeping the console theme. */
+.portfolio-art--travel { background: radial-gradient(circle at 78% 20%, rgba(45,212,191,.24), transparent 50%), linear-gradient(135deg,#10283b 0%,#0c1b31 52%,#162744 100%); }
+.portfolio-art--travel .portfolio-art-icon { color:#5eead4; border-color:rgba(94,234,212,.32); background:rgba(15,118,110,.16); }
+.portfolio-art--travel .portfolio-mock-chart { background:linear-gradient(135deg,rgba(56,189,248,.09),rgba(45,212,191,.19)); }
+.portfolio-art--travel .portfolio-mock-chart i { background:linear-gradient(180deg,#5eead4,#38bdf8); }

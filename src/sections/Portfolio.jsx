@@ -27,10 +27,10 @@ export default function Portfolio() {
   }, [])
 
   return <section id="portfolio" className="section portfolio-section"><div className="container">
-    <div className="section-top"><SectionTitle num="04" eyebrow="PORTFOLIO / DEVELOPER CONSOLE" title={<>精選<span className="accent">作品集</span></>} text="以工程師控制台方式瀏覽我的專案經歷：系統領域、技術組合、參與角色及核心工作內容。"/><span className="section-side-note">EXPLORE THE WORK</span></div>
+    <div className="section-top"><SectionTitle num="04" eyebrow="PORTFOLIO / DEVELOPER CONSOLE" title={<>精選<span className="accent">作品集</span></>} text="目前收錄 BusanTravel 個人作品，展示實作功能、技術架構與線上 Demo。"/><span className="section-side-note">EXPLORE THE WORK</span></div>
     <div className="console-shell">
       <div className="console-toolbar"><div className="console-identity"><span className="console-terminal"><Terminal size={20}/></span><div><strong>LVB / DEV CONSOLE</strong><small>PROJECT WORKSPACE · CASE STUDIES</small></div></div><div className="console-status"><span className="console-indicator"/> PORTFOLIO READY</div></div>
-      <div className="console-content"><div className="console-heading"><div><span className="console-overline"><Command size={13}/> WORKSPACE / PROJECTS</span><h3>Project Overview</h3><p>精選實作與工作案例，點選查看專案細節。</p></div><span className="console-heading-mark"><LayoutGrid size={20}/></span></div>
+      <div className="console-content"><div className="console-heading"><div><span className="console-overline"><Command size={13}/> WORKSPACE / PROJECTS</span><h3>Project Overview</h3><p>目前公開展示 BusanTravel 個人專案，點選卡片查看實作細節與系統架構。</p></div><span className="console-heading-mark"><LayoutGrid size={20}/></span></div>
         <PortfolioStats items={portfolioItems}/>
         <ProjectFilters filters={portfolioFilters} filter={filter} onFilter={setFilter} query={query} onQuery={setQuery} count={visible.length}/>
         <div className="console-project-grid">{visible.map((item,index)=><ProjectCard key={item.id} item={item} index={index} onOpen={id => {window.location.hash = `/projects/${id}`}}/>)}</div>
@@ -38,6 +38,6 @@ export default function Portfolio() {
       </div>
       <div className="console-footer"><span><Terminal size={14}/> portfolio@lvb:~$ explore --projects</span><span><CircleDot size={13}/> {portfolioItems.length} CASE STUDIES LOADED</span></div>
     </div>
-    <p className="portfolio-disclaimer">視覺圖為概念示意，並非實際公司內部系統截圖；專案內容僅展示可公開分享的經歷。狀態標示表示作品集介面可使用，不代表任何外部服務的即時狀態。</p>
+    <p className="portfolio-disclaimer">目前只有 BusanTravel 為公開作品。卡片封面使用概念示意視覺，並非實際產品截圖。狀態標示表示作品集介面可使用，不代表任何外部服務的即時狀態。</p>
   </div></section>
 }
